@@ -24,6 +24,9 @@ ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
 endif
 
+# Use personal signing keys 
+PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
+
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
