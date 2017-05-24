@@ -39,3 +39,12 @@ else
 PRODUCT_COPY_FILES += \
     vendor/pure/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
 endif
+
+# Proprietary latinime libs needed for Keyboard swyping
+ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
